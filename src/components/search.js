@@ -1,8 +1,8 @@
 import * as React from "react"
 
-const Search = ({ searchTerm, setSearchTerm }) => {
+const Search = ({ searchTerm, setSearchTerm, width }) => {
   return (
-    <div class="flex items-center lg:w-[35rem] w-[20rem]">
+    <div class={`flex items-center ${width}`}>
       <div class="relative w-full">
         <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
           <svg
