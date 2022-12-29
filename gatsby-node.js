@@ -28,20 +28,39 @@ function slugify(name) {
  */
 exports.createPages = ({ actions }) => {
   
-  const standards = fs.readdirSync('./standards');
+  const coursesRaw = fs.readdirSync('./content/courses');
+  const articlesRaw = fs.readdirSync('./content/articles');
 
   const { createPage } = actions
 
-  let standardsFileData = [];
+  let courseFileData = [];
+  let articleFileData = [];
   let standardCategories = {};
 
-  standards.forEach((standard, index) => {
+  articlesRaw.forEach((articleName, index) => {
 
-    const standardData = fs.readFileSync('./standards/' + standard, 'utf-8');
-    const stdData = parse(standardData);
-    const cleanedData = clean(stdData);
+    const articleDataRaw = fs.readFileSync('./content/articles/' +articleName, 'utf-8');
+    const articleDataUncleaned = parse(articleDataRaw);
+    const articleData = clean(articleDataUncleaned);
 
-    cleanedData.tags.forEach(tag => {
+    articleFileData.push(articleData);
+
+    createPage({
+      path: `/articles/${articleData.slug}`,
+      component: require.resolve("./src/templates/article.js"),
+      context: { ...articleData, index },
+      defer: false,
+    })
+
+  })
+
+  coursesRaw.forEach((courseName, index) => {
+
+    const courseDataRaw = fs.readFileSync('./content/courses/' +courseName, 'utf-8');
+    const courseDataUncleaned = parse(courseDataRaw);
+    const courseData = clean(courseDataUncleaned);
+
+    courseData.tags.forEach(tag => {
 
       if (standardCategories[tag] == undefined) {
 
@@ -49,44 +68,36 @@ exports.createPages = ({ actions }) => {
 
       }
 
-      standardCategories[tag].push(cleanedData);
+      standardCategories[tag].push(courseData);
 
     })
 
-    standardsFileData.push(cleanedData);
+    courseFileData.push(courseData);
 
     createPage({
-      path: `/standards/${cleanedData.slug}`,
-      component: require.resolve("./src/templates/standard.js"),
-      context: { ...cleanedData, index },
-      defer: false,
-    })
-
-    createPage({
-      path: `/standards/${cleanedData.slug}.html`,
-      component: require.resolve("./src/templates/standardHtml.js"),
-      context: { ...cleanedData, index },
-      defer: false,
-    })
-
-    // Todo: Generate PDF Versions of Each Standard
-
-  })
-
-  Object.keys(standardCategories).forEach(category => {
-
-    const values = standardCategories[category];
-    const slugifiedCategory = slugify(category);
-
-    createPage({
-      path: `/categories/${slugifiedCategory}`,
-      component: require.resolve("./src/templates/category.js"),
-      context: { standards: values, slug: slugifiedCategory, category },
+      path: `/courses/${courseData.slug}`,
+      component: require.resolve("./src/templates/course.js"),
+      context: { ...courseData, index },
       defer: false,
     })
 
   })
 
-  fs.writeFileSync('./data/standards.json', JSON.stringify(standardsFileData, null, 4));
+  // Object.keys(standardCategories).forEach(category => {
+
+  //   const values = standardCategories[category];
+  //   const slugifiedCategory = slugify(category);
+
+  //   createPage({
+  //     path: `/categories/${slugifiedCategory}`,
+  //     component: require.resolve("./src/templates/category.js"),
+  //     context: { standards: values, slug: slugifiedCategory, category },
+  //     defer: false,
+  //   })
+
+  // })
+
+  fs.writeFileSync('./data/courses.json', JSON.stringify(courseFileData, null, 4));
+  fs.writeFileSync('./data/articles.json', JSON.stringify(articleFileData, null, 4));
 
 }

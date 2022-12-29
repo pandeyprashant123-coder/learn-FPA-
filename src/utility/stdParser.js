@@ -152,6 +152,93 @@ function parseHtml(htmlData) {
 
 }
 
+function parseCode(codeData) {
+
+    let lang = "";
+    let data = "";
+
+    let i = 0;
+    let state = 0;
+
+    while (i < codeData.length) {
+
+        switch (state) {
+
+            case 0:
+
+                if (codeData[i] == '\n') {
+
+                    state = 2;
+                    break;
+
+                }
+
+                if (codeData[i] != '`') {
+
+                    lang += codeData[i];
+                    state = 1;
+                    break;
+
+                }
+
+                break;
+
+            case 1:
+
+                if (codeData[i] == '\n') {
+
+                    state = 2;
+                    break;
+
+                }
+
+                lang += codeData[i];
+                
+                break;
+
+            case 2:
+
+                if (codeData[i] == '`') {
+
+                    while (codeData[i] == '`') {
+
+                        i++;
+
+                    }
+                    
+                    return [ {
+                        type: `code`,
+                        lang: lang,
+                        data: data
+                    }, i ];
+
+                }
+
+                if (codeData[i] == '\\') {
+
+                    i++;
+                    break;
+
+                }
+
+                data += codeData[i];
+
+                break;
+
+        }
+
+        i++;
+
+    }
+
+    return [ {
+        type: `code`,
+        lang: lang,
+        data: data
+    }, i ];
+
+}
+
 function Parse(fileData, until) {
 
     let body = [];
@@ -204,6 +291,17 @@ function Parse(fileData, until) {
                     state = 0;
                     if (buffer.trim() != "") body.push({ type: "p", data: buffer });
                     buffer = "";
+                    break;
+
+                }
+
+                if (curChar == '`') {
+
+                    if (buffer.trim() != "") body.push({ type: "p", data: buffer });
+                    buffer = "";
+                    const [ htmlData, _i ] = parseCode(fileData.slice(i));
+                    body.push(htmlData);
+                    i += _i - 1; // -1 bc we add one later
                     break;
 
                 }

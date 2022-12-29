@@ -1,0 +1,75 @@
+[
+    {
+        "title": "Hello World in Javascript",
+        "description": "This part of the tutorial is about core JavaScript, the language itself.",
+        "tags": [
+            "Javascript",
+            "Introduction",
+            "Hello World"
+        ],
+        "slug": "hello-world-in-javascript",
+        "authors": [
+            {
+                "name": "William McGonagle",
+                "slug": "william-mcgonagle"
+            }
+        ],
+        "sections": {
+            "general": [
+                "This part of the tutorial is about core JavaScript, the language itself.",
+                "But we need a working environment to run our scripts and, since this book is online, the browser is a good choice. We’ll keep the amount of browser-specific commands (like alert) to a minimum so that you don’t spend time on them if you plan to concentrate on another environment (like Node.js). We’ll focus on JavaScript in the browser in the next part of the tutorial.",
+                "So first, let’s see how we attach a script to a webpage. For server-side environments (like Node.js), you can execute the script with a command like \"node my.js\"."
+            ],
+            "the “script” tag": [
+                "JavaScript programs can be inserted almost anywhere into an HTML document using the script tag.",
+                "For instance:",
+                "You can run the example by clicking the “Play” button in the right-top corner of the box above."
+            ]
+        },
+        "tableOfContents": [
+            {
+                "name": "The “script” tag",
+                "contents": []
+            }
+        ],
+        "body": [
+            {
+                "type": "h1",
+                "data": "Hello World in Javascript"
+            },
+            {
+                "type": "p",
+                "data": "This part of the tutorial is about core JavaScript, the language itself."
+            },
+            {
+                "type": "p",
+                "data": "But we need a working environment to run our scripts and, since this book is online, the browser is a good choice. We’ll keep the amount of browser-specific commands (like alert) to a minimum so that you don’t spend time on them if you plan to concentrate on another environment (like Node.js). We’ll focus on JavaScript in the browser in the next part of the tutorial."
+            },
+            {
+                "type": "p",
+                "data": "So first, let’s see how we attach a script to a webpage. For server-side environments (like Node.js), you can execute the script with a command like \"node my.js\"."
+            },
+            {
+                "type": "h2",
+                "data": "The “script” tag"
+            },
+            {
+                "type": "p",
+                "data": "JavaScript programs can be inserted almost anywhere into an HTML document using the script tag."
+            },
+            {
+                "type": "p",
+                "data": "For instance:"
+            },
+            {
+                "type": "code",
+                "lang": "javascript",
+                "data": "alert(\"Hello World\");\n"
+            },
+            {
+                "type": "p",
+                "data": "You can run the example by clicking the “Play” button in the right-top corner of the box above."
+            }
+        ]
+    }
+]

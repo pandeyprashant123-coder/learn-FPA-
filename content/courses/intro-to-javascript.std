@@ -3,8 +3,11 @@
     <tag>Learn to Code</tag>
     <tag>Javascript</tag>
     <tag>Web Development</tag>
+    <slug>intro-to-javascript</slug>
 </head>
 
 # Intro to Javascript
+
+Learn the basics of Javascript in minutes with this short course.
 
 With this course, you can learn everything from the basics of Javascript to more advanced concepts like Object-Oriented Programming (OOP) and Reflection.

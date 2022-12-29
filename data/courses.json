@@ -1,0 +1,34 @@
+[
+    {
+        "title": "Intro to Javascript",
+        "description": "Learn the basics of Javascript in minutes with this short course.",
+        "tags": [
+            "Learn to Code",
+            "Javascript",
+            "Web Development"
+        ],
+        "slug": "intro-to-javascript",
+        "authors": [
+            {
+                "name": "William McGonagle",
+                "slug": "william-mcgonagle"
+            }
+        ],
+        "sections": {
+            "general": [
+                "Learn the basics of Javascript in minutes with this short course."
+            ]
+        },
+        "tableOfContents": [],
+        "body": [
+            {
+                "type": "h1",
+                "data": "Intro to Javascript"
+            },
+            {
+                "type": "p",
+                "data": "Learn the basics of Javascript in minutes with this short course."
+            }
+        ]
+    }
+]

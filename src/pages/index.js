@@ -3,6 +3,7 @@ import { Link } from "gatsby"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+import Course from "../components/course"
 
 function IndexPage() {
 
@@ -31,7 +32,65 @@ function IndexPage() {
         </div>
       </section> 
       <section>
-        {/* <Categories/> */}
+        <div className="mx-auto max-w-screen-xl px-4 py-16 lg:flex flex-col">
+          <h2 class="text-2xl font-extrabold sm:text-4xl mb-4">Our Courses</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {
+              [
+                {
+                  title: "Testing",
+                  slug: "testing",
+                  description: "This is a really short description about what the course has to offer."
+                },
+                {
+                  title: "Testing",
+                  slug: "testing",
+                  description: "This is a really short description about what the course has to offer."
+                },
+                {
+                  title: "Testing",
+                  slug: "testing",
+                  description: "This is a really short description about what the course has to offer."
+                },
+                {
+                  title: "Testing",
+                  slug: "testing",
+                  description: "This is a really short description about what the course has to offer."
+                },
+                {
+                  title: "Testing",
+                  slug: "testing",
+                  description: "This is a really short description about what the course has to offer."
+                },
+                {
+                  title: "Testing",
+                  slug: "testing",
+                  description: "This is a really short description about what the course has to offer."
+                },
+                {
+                  title: "Testing",
+                  slug: "testing",
+                  description: "This is a really short description about what the course has to offer."
+                },
+              ].filter((_, i) => i < 6).map(item => Course(item))
+            }
+          </div>
+        </div>
+      </section>
+      <section>
+        <div className="mx-auto max-w-screen-xl px-4 py-16 lg:flex flex-col">
+          <h2 class="text-2xl font-extrabold sm:text-4xl mb-4">Features</h2>
+        </div>
+      </section>
+      <section>
+        <div className="mx-auto max-w-screen-xl px-4 py-16 lg:flex flex-col">
+          <h2 class="text-2xl font-extrabold sm:text-4xl mb-4">Categories</h2>
+        </div>
+      </section>
+      <section>
+        <div className="mx-auto max-w-screen-xl px-4 py-16 lg:flex flex-col">
+          <h2 class="text-2xl font-extrabold sm:text-4xl mb-4">Support</h2>
+        </div>
       </section>
     </Layout>
   )

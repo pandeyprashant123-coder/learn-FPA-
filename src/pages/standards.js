@@ -30,29 +30,31 @@ function filterStandard(standards, searchTerm) {
 }
 
 function ProgramsPage() {
-  let standards = require("../../data/standards.json")
-  const [searchTerm, setSearchTerm] = useState("")
+  // let standards = require("../../data/standards.json")
+  // const [searchTerm, setSearchTerm] = useState("")
 
-  return (
-    <Layout>
-      <section>
-        <div class="mx-auto max-w-6xl px-4 pb-16 flex flex-col mt-8">
-          <h2 className="font-bold text-4xl mb-4">Standards</h2>
-          <p className="text-xl mb-3 max-w-2xl">
-            Below is a list of all the standards that are stored in the Vault.
-            These standards are labeled with their current status.
-          </p>
-          <Search
-            searchTerm={searchTerm}
-            setSearchTerm={setSearchTerm}
-          />
-          <div class="grid gap-4 grid-cols-1 md:grid-cols-2 mt-6">
-            {filterStandard(standards, searchTerm).map(item => Standard(item))}
-          </div>
-        </div>
-      </section>
-    </Layout>
-  )
+  // return (
+  //   <Layout>
+  //     <section>
+  //       <div class="mx-auto max-w-6xl px-4 pb-16 flex flex-col mt-8">
+  //         <h2 className="font-bold text-4xl mb-4">Standards</h2>
+  //         <p className="text-xl mb-3 max-w-2xl">
+  //           Below is a list of all the standards that are stored in the Vault.
+  //           These standards are labeled with their current status.
+  //         </p>
+  //         <Search
+  //           searchTerm={searchTerm}
+  //           setSearchTerm={setSearchTerm}
+  //         />
+  //         <div class="grid gap-4 grid-cols-1 md:grid-cols-2 mt-6">
+  //           {filterStandard(standards, searchTerm).map(item => Standard(item))}
+  //         </div>
+  //       </div>
+  //     </section>
+  //   </Layout>
+  // )
+
+  return <></>
 }
 
 export const Head = () => <Seo title="Standards" />
