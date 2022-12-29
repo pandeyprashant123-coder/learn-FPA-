@@ -9,10 +9,10 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `FPA Vault`,
-    description: `The FPA Vault provides open access to anyone who would like to adapt standards put forth by the FPA.`,
+    title: `FPA Learn`,
+    description: `The FPA Learn Platform provides open access to anyone who would like to adapt standards put forth by the FPA.`,
     author: `@fairfieldprogramming`,
-    siteUrl: `https://standards.fairfieldprogramming.org`,
+    siteUrl: `https://learn.fairfieldprogramming.org`,
   },
   plugins: [
     'gatsby-plugin-postcss',

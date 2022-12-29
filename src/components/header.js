@@ -12,7 +12,7 @@ const Header = ({  }) => (
           aria-label="Site Nav"
           class="w-min gap-4 text-md font-medium flex md:gap-8"
         >
-          <Link class="text-gray-500 no-underline whitespace-nowrap" to="/courses">Courses ▾</Link>
+          <Link class="text-gray-500 no-underline whitespace-nowrap" activeClassName="no-underline whitespace-nowrap" to="/courses">Courses ▾</Link>
         </nav>
       </div>
       <div class="flex items-center justify-center w-full">

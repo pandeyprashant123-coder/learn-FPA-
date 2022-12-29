@@ -14,31 +14,19 @@ function IndexPage() {
         >
           <div class="mx-auto max-w-xl text-center">
             <h1 class="text-3xl font-extrabold sm:text-5xl">
-            Public Standards,
-              <strong class="font-extrabold text-active sm:block">
-                &nbsp;Made for All.
-              </strong>
+              Learn to code, for free, in ten days or less.
             </h1>
 
             <p class="mt-4 sm:text-xl sm:leading-relaxed">
-              We build simple, innovative, and modular standards without layers of bureaucracy and nonsense.
+              We offer courses for beginners, intermediates, and experts without ads, paywalls, or donation prompts.
             </p>
 
-            <div class="mt-8 flex flex-wrap justify-center gap-4">
-              <Link
-                class="block w-full rounded bg-active px-12 py-3 text-sm font-medium text-white shadow hover:bg-active focus:outline-none focus:ring active:bg-active sm:w-auto"
-                to="/standards"
+            <Link
+                class="block w-full rounded bg-active mt-4 px-12 py-3 text-sm font-medium text-white shadow hover:bg-active focus:outline-none focus:ring active:bg-active sm:w-auto"
+                to="/courses"
               >
-                View Standards
-              </Link>
-
-              <Link
-                class="block w-full rounded px-12 py-3 text-sm font-medium text-active shadow hover:text-active focus:outline-none focus:ring active:text-active sm:w-auto"
-                to="/purpose"
-              >
-                Our Purpose
-              </Link>
-            </div>
+              Start Now
+            </Link>
           </div>
         </div>
       </section> 
