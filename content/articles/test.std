@@ -1,0 +1,73 @@
+<head>
+    <slug>test-page</slug>
+    <tag>Javascript</tag>
+    <tag>Introduction</tag>
+    <tag>Test</tag>
+    <author slug="william-mcgonagle">
+        William McGonagle
+    </author>
+</head>
+
+# Testing in Standard Format
+
+This is standard paragraph text. A paragraph can range from any number of size. For instance, a paragraph can be big like this one. Or, a paragraph can be small like the next one.
+
+I'm somewhat annoyed that they called me a small paragraph. I would say that I'm a moderately size paragraph, thank you very much.
+
+## This is an h2
+
+### This is an h3
+
+#### This is an h4
+
+##### This is an h5
+
+**Below is some JavaScript code.**
+```javascript
+console.log("This is some Javascript code");
+```
+
+**Below is some Python code.**
+```python
+def test():
+    print("This is a quick test")
+
+test()
+```
+
+## Interactive Demos
+
+<widget>
+    <script>
+
+    // Global Variables
+    let gravity = 0;   
+    let velocity = 0;
+    
+    // Get Items
+    let ball = document.getElementById("ball");
+    let button = UI.showButton("Press Me!");
+
+    // On Button Press, the Ball Drops
+    button.onClick = () => {
+
+        gravity = 10;
+
+    }
+
+    // Apply Gravity to the Ball
+    setInterval(() => {
+
+        velocity += gravity;
+        ball.y += velocity;
+
+    }, 1)
+
+    </script>
+    <head>
+        <title>Test Widget</title>
+    </head>
+    <body>
+        <circle id="ball" draggable />
+    </body>
+</widget>

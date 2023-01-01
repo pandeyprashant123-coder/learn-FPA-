@@ -7,6 +7,8 @@ import Course from "../components/course"
 
 function IndexPage() {
 
+  const courses = require('../../data/courses.json');
+
   return (
     <Layout>
       <section>
@@ -36,43 +38,7 @@ function IndexPage() {
           <h2 class="text-2xl font-extrabold sm:text-4xl mb-4">Our Courses</h2>
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {
-              [
-                {
-                  title: "Testing",
-                  slug: "testing",
-                  description: "This is a really short description about what the course has to offer."
-                },
-                {
-                  title: "Testing",
-                  slug: "testing",
-                  description: "This is a really short description about what the course has to offer."
-                },
-                {
-                  title: "Testing",
-                  slug: "testing",
-                  description: "This is a really short description about what the course has to offer."
-                },
-                {
-                  title: "Testing",
-                  slug: "testing",
-                  description: "This is a really short description about what the course has to offer."
-                },
-                {
-                  title: "Testing",
-                  slug: "testing",
-                  description: "This is a really short description about what the course has to offer."
-                },
-                {
-                  title: "Testing",
-                  slug: "testing",
-                  description: "This is a really short description about what the course has to offer."
-                },
-                {
-                  title: "Testing",
-                  slug: "testing",
-                  description: "This is a really short description about what the course has to offer."
-                },
-              ].filter((_, i) => i < 6).map(item => Course(item))
+              courses.filter((_, i) => i < 6).map(item => Course(item))
             }
           </div>
         </div>

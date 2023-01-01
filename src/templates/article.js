@@ -1,15 +1,11 @@
 import * as React from "react"
 import { Link } from "gatsby"
-import hljs from 'highlight.js';
-import 'highlight.js/styles/github.css';
-import javascript from 'highlight.js/lib/languages/javascript';
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 
+import RenderMarkdown from "../components/renderMarkdown";
 import Person from "../components/person"
-
-hljs.registerLanguage('javascript', javascript);
 
 const HashCode = (str) => {
     let hash = 0;
@@ -46,57 +42,26 @@ const GetTagStyle = (name) => {
     return allStyles[Math.abs(HashCode(name)) % allStyles.length]
 
 }
-
-const RenderMarkdown = (body) => {
-
-    return body.map(item => {
-
-        if (item.type == 'h1') return;
-
-        if (item.type == 'p') {
-
-            return <p class="text-lg mb-2">{item.data}</p>
-
-        }
-
-        if (item.type == 'h2') {
-
-            return <h2 class="text-2xl font-bold w-full mt-4 mb-2 border-b-2">{item.data}</h2>
-
-        }
-
-        if (item.type == 'code') {
-
-            return <div className="block w-full p-4 bg-slate-50 rounded my-2" dangerouslySetInnerHTML={{ __html: hljs.highlight(item.data, {language: item.lang}).value }} />;
-
-        }
-
-        return item.type;
-
-    })
-
-}
-
 const Author = (author) => <Link className="hover:underline" to={`/author/${author.slug}`}>{author.name}</Link>;
 
 const Course = ({ pageContext }) => {
 
     const { slug, title, body, authors, version, sections, tags } = pageContext;
 
-  return <Layout>
-    <section>
-        <div class="mx-auto max-w-screen-md px-4 py-16">
-            <div class="flex gap-2 mb-1">
-                {tags.map(item => <span class={`rounded-3xl text-sm bg-slate-100 px-2 ${GetTagStyle(item)}`}><Link to={`/categories/${item}`}>{item}</Link></span>)}
+    return <Layout>
+        <section>
+            <div class="mx-auto max-w-screen-md px-4 py-16">
+                <div class="flex gap-2 mb-1">
+                    {tags.map(item => <span class={`rounded-3xl text-sm bg-slate-100 px-2 ${GetTagStyle(item)}`}><Link to={`/categories/${item}`}>{item}</Link></span>)}
+                </div>
+                <h1 className="font-bold text-4xl">{title}</h1>
+                { authors && <p className="text-xl mb-16 max-w-2xl">By {authors.map(author => Author(author))}</p> }
+                {
+                    RenderMarkdown(body)
+                }
             </div>
-            <h1 className="font-bold text-4xl">{title}</h1>
-            { authors && <p className="text-xl mb-16 max-w-2xl">By {authors.map(author => Author(author))}</p> }
-            {
-                RenderMarkdown(body)
-            }
-        </div>
-      </section>
-  </Layout> 
+        </section>
+    </Layout> 
 }
 
 export const Head = ({ pageContext }) => <Seo 

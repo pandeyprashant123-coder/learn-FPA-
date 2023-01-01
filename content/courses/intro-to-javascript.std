@@ -10,4 +10,14 @@
 
 Learn the basics of Javascript in minutes with this short course.
 
+## About This Course
+
 With this course, you can learn everything from the basics of Javascript to more advanced concepts like Object-Oriented Programming (OOP) and Reflection.
+
+<contents>
+    <content-section title="The Basic Syntax">
+        <content-article>hello-world-in-javascript</content-article>
+        <content-article>variables-in-javascript</content-article>
+        <content-article>hello-you-in-javascript</content-article>
+    </content-section>
+</contents>

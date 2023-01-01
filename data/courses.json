@@ -17,9 +17,17 @@
         "sections": {
             "general": [
                 "Learn the basics of Javascript in minutes with this short course."
+            ],
+            "about this course": [
+                "With this course, you can learn everything from the basics of Javascript to more advanced concepts like Object-Oriented Programming (OOP) and Reflection."
             ]
         },
-        "tableOfContents": [],
+        "tableOfContents": [
+            {
+                "name": "About This Course",
+                "contents": []
+            }
+        ],
         "body": [
             {
                 "type": "h1",
@@ -28,6 +36,58 @@
             {
                 "type": "p",
                 "data": "Learn the basics of Javascript in minutes with this short course."
+            },
+            {
+                "type": "h2",
+                "data": "About This Course"
+            },
+            {
+                "type": "p",
+                "data": "With this course, you can learn everything from the basics of Javascript to more advanced concepts like Object-Oriented Programming (OOP) and Reflection."
+            },
+            {
+                "type": "html_contents",
+                "parameters": {},
+                "children": [
+                    {
+                        "type": "html_content-section",
+                        "parameters": {
+                            "title": "The Basic Syntax"
+                        },
+                        "children": [
+                            {
+                                "type": "html_content-article",
+                                "parameters": {},
+                                "children": [
+                                    {
+                                        "type": "p",
+                                        "data": "hello-world-in-javascript"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "html_content-article",
+                                "parameters": {},
+                                "children": [
+                                    {
+                                        "type": "p",
+                                        "data": "variables-in-javascript"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "html_content-article",
+                                "parameters": {},
+                                "children": [
+                                    {
+                                        "type": "p",
+                                        "data": "hello-you-in-javascript"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
             }
         ]
     }
