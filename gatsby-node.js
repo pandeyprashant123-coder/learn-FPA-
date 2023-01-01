@@ -35,7 +35,7 @@ exports.createPages = ({ actions }) => {
 
   let courseFileData = [];
   let articleFileData = [];
-  let standardCategories = {};
+  let categories = {};
 
   articlesRaw.forEach((articleName, index) => {
 
@@ -44,6 +44,13 @@ exports.createPages = ({ actions }) => {
     const articleData = clean(articleDataUncleaned);
 
     articleFileData.push(articleData);
+
+    articleData.tags.forEach((item) => {
+
+      if (categories[item] == undefined) categories[item] = [];
+      categories[item].push({ ...articleData, type: 'article' });
+
+    })
 
     createPage({
       path: `/articles/${articleData.slug}`,
@@ -60,15 +67,10 @@ exports.createPages = ({ actions }) => {
     const courseDataUncleaned = parse(courseDataRaw);
     const courseData = clean(courseDataUncleaned);
 
-    courseData.tags.forEach(tag => {
+    courseData.tags.forEach((item) => {
 
-      if (standardCategories[tag] == undefined) {
-
-        standardCategories[tag] = [];
-
-      }
-
-      standardCategories[tag].push(courseData);
+      if (categories[item] == undefined) categories[item] = [];
+      categories[item].push({ ...courseData, type: 'course' });
 
     })
 
@@ -99,5 +101,6 @@ exports.createPages = ({ actions }) => {
 
   fs.writeFileSync('./data/courses.json', JSON.stringify(courseFileData, null, 4));
   fs.writeFileSync('./data/articles.json', JSON.stringify(articleFileData, null, 4));
+  fs.writeFileSync('./data/categories.json', JSON.stringify(categories, null, 4));
 
 }

@@ -1,0 +1,1130 @@
+{
+    "Javascript": [
+        {
+            "title": "Hello World in Javascript",
+            "description": "This part of the tutorial is about core JavaScript, the language itself.",
+            "tags": [
+                "Javascript",
+                "Introduction",
+                "Hello World"
+            ],
+            "slug": "hello-world-in-javascript",
+            "authors": [
+                {
+                    "name": "William McGonagle",
+                    "slug": "william-mcgonagle"
+                }
+            ],
+            "sections": {
+                "general": [
+                    "This part of the tutorial is about core JavaScript, the language itself.",
+                    "But we need a working environment to run our scripts and, since this book is online, the browser is a good choice. We’ll keep the amount of browser-specific commands (like alert) to a minimum so that you don’t spend time on them if you plan to concentrate on another environment (like Node.js). We’ll focus on JavaScript in the browser in the next part of the tutorial.",
+                    "So first, let’s see how we attach a script to a webpage. For server-side environments (like Node.js), you can execute the script with a command like \"node my.js\"."
+                ],
+                "the “script” tag": [
+                    "JavaScript programs can be inserted almost anywhere into an HTML document using the script tag.",
+                    "For instance:",
+                    "You can run the example by clicking the “Play” button in the right-top corner of the box above."
+                ]
+            },
+            "tableOfContents": [
+                {
+                    "name": "The “script” tag",
+                    "contents": []
+                }
+            ],
+            "body": [
+                {
+                    "type": "h1",
+                    "data": "Hello World in Javascript"
+                },
+                {
+                    "type": "p",
+                    "data": "This part of the tutorial is about core JavaScript, the language itself."
+                },
+                {
+                    "type": "p",
+                    "data": "But we need a working environment to run our scripts and, since this book is online, the browser is a good choice. We’ll keep the amount of browser-specific commands (like alert) to a minimum so that you don’t spend time on them if you plan to concentrate on another environment (like Node.js). We’ll focus on JavaScript in the browser in the next part of the tutorial."
+                },
+                {
+                    "type": "p",
+                    "data": "So first, let’s see how we attach a script to a webpage. For server-side environments (like Node.js), you can execute the script with a command like \"node my.js\"."
+                },
+                {
+                    "type": "h2",
+                    "data": "The “script” tag"
+                },
+                {
+                    "type": "p",
+                    "data": "JavaScript programs can be inserted almost anywhere into an HTML document using the script tag."
+                },
+                {
+                    "type": "p",
+                    "data": "For instance:"
+                },
+                {
+                    "type": "code",
+                    "lang": "javascript",
+                    "data": "alert(\"Hello World\");\n"
+                },
+                {
+                    "type": "p",
+                    "data": "You can run the example by clicking the “Play” button in the right-top corner of the box above."
+                }
+            ],
+            "type": "article"
+        },
+        {
+            "title": "Testing in Standard Format",
+            "description": "This is standard paragraph text. A paragraph can range from any number of size. For instance, a paragraph can be big like this one. Or, a paragraph can be small like the next one.",
+            "tags": [
+                "Javascript",
+                "Introduction",
+                "Test"
+            ],
+            "slug": "test-page",
+            "authors": [
+                {
+                    "name": "William McGonagle",
+                    "slug": "william-mcgonagle"
+                }
+            ],
+            "sections": {
+                "general": [
+                    "This is standard paragraph text. A paragraph can range from any number of size. For instance, a paragraph can be big like this one. Or, a paragraph can be small like the next one.",
+                    "I'm somewhat annoyed that they called me a small paragraph. I would say that I'm a moderately size paragraph, thank you very much."
+                ],
+                "this is an h2": [
+                    "**Below is some JavaScript code.**",
+                    "**Below is some Python code.**"
+                ],
+                "interactive demos": []
+            },
+            "tableOfContents": [
+                {
+                    "name": "This is an h2",
+                    "contents": [
+                        {
+                            "name": "This is an h3",
+                            "contents": [
+                                {
+                                    "name": "This is an h4",
+                                    "contents": [
+                                        {
+                                            "name": "This is an h5"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Interactive Demos",
+                    "contents": []
+                }
+            ],
+            "body": [
+                {
+                    "type": "h1",
+                    "data": "Testing in Standard Format"
+                },
+                {
+                    "type": "p",
+                    "data": "This is standard paragraph text. A paragraph can range from any number of size. For instance, a paragraph can be big like this one. Or, a paragraph can be small like the next one."
+                },
+                {
+                    "type": "p",
+                    "data": "I'm somewhat annoyed that they called me a small paragraph. I would say that I'm a moderately size paragraph, thank you very much."
+                },
+                {
+                    "type": "h2",
+                    "data": "This is an h2"
+                },
+                {
+                    "type": "h3",
+                    "data": "This is an h3"
+                },
+                {
+                    "type": "h4",
+                    "data": "This is an h4"
+                },
+                {
+                    "type": "h5",
+                    "data": "This is an h5"
+                },
+                {
+                    "type": "p",
+                    "data": "**Below is some JavaScript code.**"
+                },
+                {
+                    "type": "code",
+                    "lang": "javascript",
+                    "data": "console.log(\"This is some Javascript code\");\n"
+                },
+                {
+                    "type": "p",
+                    "data": "**Below is some Python code.**"
+                },
+                {
+                    "type": "code",
+                    "lang": "python",
+                    "data": "def test():\n    print(\"This is a quick test\")\n\ntest()\n"
+                },
+                {
+                    "type": "h2",
+                    "data": "Interactive Demos"
+                },
+                {
+                    "type": "html_widget",
+                    "parameters": {},
+                    "children": [
+                        {
+                            "type": "html_script",
+                            "parameters": {},
+                            "children": [
+                                {
+                                    "type": "p",
+                                    "data": "    // Global Variables"
+                                },
+                                {
+                                    "type": "p",
+                                    "data": "    let gravity = 0;"
+                                },
+                                {
+                                    "type": "p",
+                                    "data": "    let velocity = 0;"
+                                },
+                                {
+                                    "type": "p",
+                                    "data": "    // Get Items"
+                                },
+                                {
+                                    "type": "p",
+                                    "data": "    let ball = document.getElementById(\"ball\");"
+                                },
+                                {
+                                    "type": "p",
+                                    "data": "    let button = UI.showButton(\"Press Me!\");"
+                                },
+                                {
+                                    "type": "p",
+                                    "data": "    // On Button Press, the Ball Drops"
+                                },
+                                {
+                                    "type": "p",
+                                    "data": "    button.addEventListener(\"onclick\", () => {"
+                                },
+                                {
+                                    "type": "p",
+                                    "data": "        gravity = 10;"
+                                },
+                                {
+                                    "type": "p",
+                                    "data": "    });"
+                                },
+                                {
+                                    "type": "p",
+                                    "data": "    // Apply Gravity to the Ball"
+                                },
+                                {
+                                    "type": "p",
+                                    "data": "    // setInterval(() => {"
+                                },
+                                {
+                                    "type": "p",
+                                    "data": "    //    velocity += gravity;"
+                                },
+                                {
+                                    "type": "p",
+                                    "data": "    //    ball.y += velocity;"
+                                },
+                                {
+                                    "type": "p",
+                                    "data": "    // }, 1)"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "html_head",
+                            "parameters": {},
+                            "children": [
+                                {
+                                    "type": "html_title",
+                                    "parameters": {},
+                                    "children": [
+                                        {
+                                            "type": "p",
+                                            "data": "Test Widget"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "html_body",
+                            "parameters": {},
+                            "children": [
+                                {
+                                    "type": "html_circle",
+                                    "parameters": {
+                                        "id": "ball"
+                                    },
+                                    "children": {}
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "type": "article"
+        },
+        {
+            "title": "Intro to Javascript",
+            "description": "Learn the basics of Javascript in minutes with this short course.",
+            "tags": [
+                "Learn to Code",
+                "Javascript",
+                "Web Development"
+            ],
+            "slug": "intro-to-javascript",
+            "authors": [
+                {
+                    "name": "William McGonagle",
+                    "slug": "william-mcgonagle"
+                }
+            ],
+            "sections": {
+                "general": [
+                    "Learn the basics of Javascript in minutes with this short course."
+                ],
+                "about this course": [
+                    "With this course, you can learn everything from the basics of Javascript to more advanced concepts like Object-Oriented Programming (OOP) and Reflection."
+                ]
+            },
+            "tableOfContents": [
+                {
+                    "name": "About This Course",
+                    "contents": []
+                }
+            ],
+            "body": [
+                {
+                    "type": "h1",
+                    "data": "Intro to Javascript"
+                },
+                {
+                    "type": "p",
+                    "data": "Learn the basics of Javascript in minutes with this short course."
+                },
+                {
+                    "type": "h2",
+                    "data": "About This Course"
+                },
+                {
+                    "type": "p",
+                    "data": "With this course, you can learn everything from the basics of Javascript to more advanced concepts like Object-Oriented Programming (OOP) and Reflection."
+                },
+                {
+                    "type": "html_contents",
+                    "parameters": {},
+                    "children": [
+                        {
+                            "type": "html_content-section",
+                            "parameters": {
+                                "title": "The Basic Syntax"
+                            },
+                            "children": [
+                                {
+                                    "type": "html_content-article",
+                                    "parameters": {},
+                                    "children": [
+                                        {
+                                            "type": "p",
+                                            "data": "hello-world-in-javascript"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "html_content-article",
+                                    "parameters": {},
+                                    "children": [
+                                        {
+                                            "type": "p",
+                                            "data": "variables-in-javascript"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "html_content-article",
+                                    "parameters": {},
+                                    "children": [
+                                        {
+                                            "type": "p",
+                                            "data": "hello-you-in-javascript"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "type": "course"
+        }
+    ],
+    "Introduction": [
+        {
+            "title": "Hello World in Javascript",
+            "description": "This part of the tutorial is about core JavaScript, the language itself.",
+            "tags": [
+                "Javascript",
+                "Introduction",
+                "Hello World"
+            ],
+            "slug": "hello-world-in-javascript",
+            "authors": [
+                {
+                    "name": "William McGonagle",
+                    "slug": "william-mcgonagle"
+                }
+            ],
+            "sections": {
+                "general": [
+                    "This part of the tutorial is about core JavaScript, the language itself.",
+                    "But we need a working environment to run our scripts and, since this book is online, the browser is a good choice. We’ll keep the amount of browser-specific commands (like alert) to a minimum so that you don’t spend time on them if you plan to concentrate on another environment (like Node.js). We’ll focus on JavaScript in the browser in the next part of the tutorial.",
+                    "So first, let’s see how we attach a script to a webpage. For server-side environments (like Node.js), you can execute the script with a command like \"node my.js\"."
+                ],
+                "the “script” tag": [
+                    "JavaScript programs can be inserted almost anywhere into an HTML document using the script tag.",
+                    "For instance:",
+                    "You can run the example by clicking the “Play” button in the right-top corner of the box above."
+                ]
+            },
+            "tableOfContents": [
+                {
+                    "name": "The “script” tag",
+                    "contents": []
+                }
+            ],
+            "body": [
+                {
+                    "type": "h1",
+                    "data": "Hello World in Javascript"
+                },
+                {
+                    "type": "p",
+                    "data": "This part of the tutorial is about core JavaScript, the language itself."
+                },
+                {
+                    "type": "p",
+                    "data": "But we need a working environment to run our scripts and, since this book is online, the browser is a good choice. We’ll keep the amount of browser-specific commands (like alert) to a minimum so that you don’t spend time on them if you plan to concentrate on another environment (like Node.js). We’ll focus on JavaScript in the browser in the next part of the tutorial."
+                },
+                {
+                    "type": "p",
+                    "data": "So first, let’s see how we attach a script to a webpage. For server-side environments (like Node.js), you can execute the script with a command like \"node my.js\"."
+                },
+                {
+                    "type": "h2",
+                    "data": "The “script” tag"
+                },
+                {
+                    "type": "p",
+                    "data": "JavaScript programs can be inserted almost anywhere into an HTML document using the script tag."
+                },
+                {
+                    "type": "p",
+                    "data": "For instance:"
+                },
+                {
+                    "type": "code",
+                    "lang": "javascript",
+                    "data": "alert(\"Hello World\");\n"
+                },
+                {
+                    "type": "p",
+                    "data": "You can run the example by clicking the “Play” button in the right-top corner of the box above."
+                }
+            ],
+            "type": "article"
+        },
+        {
+            "title": "Testing in Standard Format",
+            "description": "This is standard paragraph text. A paragraph can range from any number of size. For instance, a paragraph can be big like this one. Or, a paragraph can be small like the next one.",
+            "tags": [
+                "Javascript",
+                "Introduction",
+                "Test"
+            ],
+            "slug": "test-page",
+            "authors": [
+                {
+                    "name": "William McGonagle",
+                    "slug": "william-mcgonagle"
+                }
+            ],
+            "sections": {
+                "general": [
+                    "This is standard paragraph text. A paragraph can range from any number of size. For instance, a paragraph can be big like this one. Or, a paragraph can be small like the next one.",
+                    "I'm somewhat annoyed that they called me a small paragraph. I would say that I'm a moderately size paragraph, thank you very much."
+                ],
+                "this is an h2": [
+                    "**Below is some JavaScript code.**",
+                    "**Below is some Python code.**"
+                ],
+                "interactive demos": []
+            },
+            "tableOfContents": [
+                {
+                    "name": "This is an h2",
+                    "contents": [
+                        {
+                            "name": "This is an h3",
+                            "contents": [
+                                {
+                                    "name": "This is an h4",
+                                    "contents": [
+                                        {
+                                            "name": "This is an h5"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Interactive Demos",
+                    "contents": []
+                }
+            ],
+            "body": [
+                {
+                    "type": "h1",
+                    "data": "Testing in Standard Format"
+                },
+                {
+                    "type": "p",
+                    "data": "This is standard paragraph text. A paragraph can range from any number of size. For instance, a paragraph can be big like this one. Or, a paragraph can be small like the next one."
+                },
+                {
+                    "type": "p",
+                    "data": "I'm somewhat annoyed that they called me a small paragraph. I would say that I'm a moderately size paragraph, thank you very much."
+                },
+                {
+                    "type": "h2",
+                    "data": "This is an h2"
+                },
+                {
+                    "type": "h3",
+                    "data": "This is an h3"
+                },
+                {
+                    "type": "h4",
+                    "data": "This is an h4"
+                },
+                {
+                    "type": "h5",
+                    "data": "This is an h5"
+                },
+                {
+                    "type": "p",
+                    "data": "**Below is some JavaScript code.**"
+                },
+                {
+                    "type": "code",
+                    "lang": "javascript",
+                    "data": "console.log(\"This is some Javascript code\");\n"
+                },
+                {
+                    "type": "p",
+                    "data": "**Below is some Python code.**"
+                },
+                {
+                    "type": "code",
+                    "lang": "python",
+                    "data": "def test():\n    print(\"This is a quick test\")\n\ntest()\n"
+                },
+                {
+                    "type": "h2",
+                    "data": "Interactive Demos"
+                },
+                {
+                    "type": "html_widget",
+                    "parameters": {},
+                    "children": [
+                        {
+                            "type": "html_script",
+                            "parameters": {},
+                            "children": [
+                                {
+                                    "type": "p",
+                                    "data": "    // Global Variables"
+                                },
+                                {
+                                    "type": "p",
+                                    "data": "    let gravity = 0;"
+                                },
+                                {
+                                    "type": "p",
+                                    "data": "    let velocity = 0;"
+                                },
+                                {
+                                    "type": "p",
+                                    "data": "    // Get Items"
+                                },
+                                {
+                                    "type": "p",
+                                    "data": "    let ball = document.getElementById(\"ball\");"
+                                },
+                                {
+                                    "type": "p",
+                                    "data": "    let button = UI.showButton(\"Press Me!\");"
+                                },
+                                {
+                                    "type": "p",
+                                    "data": "    // On Button Press, the Ball Drops"
+                                },
+                                {
+                                    "type": "p",
+                                    "data": "    button.addEventListener(\"onclick\", () => {"
+                                },
+                                {
+                                    "type": "p",
+                                    "data": "        gravity = 10;"
+                                },
+                                {
+                                    "type": "p",
+                                    "data": "    });"
+                                },
+                                {
+                                    "type": "p",
+                                    "data": "    // Apply Gravity to the Ball"
+                                },
+                                {
+                                    "type": "p",
+                                    "data": "    // setInterval(() => {"
+                                },
+                                {
+                                    "type": "p",
+                                    "data": "    //    velocity += gravity;"
+                                },
+                                {
+                                    "type": "p",
+                                    "data": "    //    ball.y += velocity;"
+                                },
+                                {
+                                    "type": "p",
+                                    "data": "    // }, 1)"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "html_head",
+                            "parameters": {},
+                            "children": [
+                                {
+                                    "type": "html_title",
+                                    "parameters": {},
+                                    "children": [
+                                        {
+                                            "type": "p",
+                                            "data": "Test Widget"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "html_body",
+                            "parameters": {},
+                            "children": [
+                                {
+                                    "type": "html_circle",
+                                    "parameters": {
+                                        "id": "ball"
+                                    },
+                                    "children": {}
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "type": "article"
+        }
+    ],
+    "Hello World": [
+        {
+            "title": "Hello World in Javascript",
+            "description": "This part of the tutorial is about core JavaScript, the language itself.",
+            "tags": [
+                "Javascript",
+                "Introduction",
+                "Hello World"
+            ],
+            "slug": "hello-world-in-javascript",
+            "authors": [
+                {
+                    "name": "William McGonagle",
+                    "slug": "william-mcgonagle"
+                }
+            ],
+            "sections": {
+                "general": [
+                    "This part of the tutorial is about core JavaScript, the language itself.",
+                    "But we need a working environment to run our scripts and, since this book is online, the browser is a good choice. We’ll keep the amount of browser-specific commands (like alert) to a minimum so that you don’t spend time on them if you plan to concentrate on another environment (like Node.js). We’ll focus on JavaScript in the browser in the next part of the tutorial.",
+                    "So first, let’s see how we attach a script to a webpage. For server-side environments (like Node.js), you can execute the script with a command like \"node my.js\"."
+                ],
+                "the “script” tag": [
+                    "JavaScript programs can be inserted almost anywhere into an HTML document using the script tag.",
+                    "For instance:",
+                    "You can run the example by clicking the “Play” button in the right-top corner of the box above."
+                ]
+            },
+            "tableOfContents": [
+                {
+                    "name": "The “script” tag",
+                    "contents": []
+                }
+            ],
+            "body": [
+                {
+                    "type": "h1",
+                    "data": "Hello World in Javascript"
+                },
+                {
+                    "type": "p",
+                    "data": "This part of the tutorial is about core JavaScript, the language itself."
+                },
+                {
+                    "type": "p",
+                    "data": "But we need a working environment to run our scripts and, since this book is online, the browser is a good choice. We’ll keep the amount of browser-specific commands (like alert) to a minimum so that you don’t spend time on them if you plan to concentrate on another environment (like Node.js). We’ll focus on JavaScript in the browser in the next part of the tutorial."
+                },
+                {
+                    "type": "p",
+                    "data": "So first, let’s see how we attach a script to a webpage. For server-side environments (like Node.js), you can execute the script with a command like \"node my.js\"."
+                },
+                {
+                    "type": "h2",
+                    "data": "The “script” tag"
+                },
+                {
+                    "type": "p",
+                    "data": "JavaScript programs can be inserted almost anywhere into an HTML document using the script tag."
+                },
+                {
+                    "type": "p",
+                    "data": "For instance:"
+                },
+                {
+                    "type": "code",
+                    "lang": "javascript",
+                    "data": "alert(\"Hello World\");\n"
+                },
+                {
+                    "type": "p",
+                    "data": "You can run the example by clicking the “Play” button in the right-top corner of the box above."
+                }
+            ],
+            "type": "article"
+        }
+    ],
+    "Test": [
+        {
+            "title": "Testing in Standard Format",
+            "description": "This is standard paragraph text. A paragraph can range from any number of size. For instance, a paragraph can be big like this one. Or, a paragraph can be small like the next one.",
+            "tags": [
+                "Javascript",
+                "Introduction",
+                "Test"
+            ],
+            "slug": "test-page",
+            "authors": [
+                {
+                    "name": "William McGonagle",
+                    "slug": "william-mcgonagle"
+                }
+            ],
+            "sections": {
+                "general": [
+                    "This is standard paragraph text. A paragraph can range from any number of size. For instance, a paragraph can be big like this one. Or, a paragraph can be small like the next one.",
+                    "I'm somewhat annoyed that they called me a small paragraph. I would say that I'm a moderately size paragraph, thank you very much."
+                ],
+                "this is an h2": [
+                    "**Below is some JavaScript code.**",
+                    "**Below is some Python code.**"
+                ],
+                "interactive demos": []
+            },
+            "tableOfContents": [
+                {
+                    "name": "This is an h2",
+                    "contents": [
+                        {
+                            "name": "This is an h3",
+                            "contents": [
+                                {
+                                    "name": "This is an h4",
+                                    "contents": [
+                                        {
+                                            "name": "This is an h5"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Interactive Demos",
+                    "contents": []
+                }
+            ],
+            "body": [
+                {
+                    "type": "h1",
+                    "data": "Testing in Standard Format"
+                },
+                {
+                    "type": "p",
+                    "data": "This is standard paragraph text. A paragraph can range from any number of size. For instance, a paragraph can be big like this one. Or, a paragraph can be small like the next one."
+                },
+                {
+                    "type": "p",
+                    "data": "I'm somewhat annoyed that they called me a small paragraph. I would say that I'm a moderately size paragraph, thank you very much."
+                },
+                {
+                    "type": "h2",
+                    "data": "This is an h2"
+                },
+                {
+                    "type": "h3",
+                    "data": "This is an h3"
+                },
+                {
+                    "type": "h4",
+                    "data": "This is an h4"
+                },
+                {
+                    "type": "h5",
+                    "data": "This is an h5"
+                },
+                {
+                    "type": "p",
+                    "data": "**Below is some JavaScript code.**"
+                },
+                {
+                    "type": "code",
+                    "lang": "javascript",
+                    "data": "console.log(\"This is some Javascript code\");\n"
+                },
+                {
+                    "type": "p",
+                    "data": "**Below is some Python code.**"
+                },
+                {
+                    "type": "code",
+                    "lang": "python",
+                    "data": "def test():\n    print(\"This is a quick test\")\n\ntest()\n"
+                },
+                {
+                    "type": "h2",
+                    "data": "Interactive Demos"
+                },
+                {
+                    "type": "html_widget",
+                    "parameters": {},
+                    "children": [
+                        {
+                            "type": "html_script",
+                            "parameters": {},
+                            "children": [
+                                {
+                                    "type": "p",
+                                    "data": "    // Global Variables"
+                                },
+                                {
+                                    "type": "p",
+                                    "data": "    let gravity = 0;"
+                                },
+                                {
+                                    "type": "p",
+                                    "data": "    let velocity = 0;"
+                                },
+                                {
+                                    "type": "p",
+                                    "data": "    // Get Items"
+                                },
+                                {
+                                    "type": "p",
+                                    "data": "    let ball = document.getElementById(\"ball\");"
+                                },
+                                {
+                                    "type": "p",
+                                    "data": "    let button = UI.showButton(\"Press Me!\");"
+                                },
+                                {
+                                    "type": "p",
+                                    "data": "    // On Button Press, the Ball Drops"
+                                },
+                                {
+                                    "type": "p",
+                                    "data": "    button.addEventListener(\"onclick\", () => {"
+                                },
+                                {
+                                    "type": "p",
+                                    "data": "        gravity = 10;"
+                                },
+                                {
+                                    "type": "p",
+                                    "data": "    });"
+                                },
+                                {
+                                    "type": "p",
+                                    "data": "    // Apply Gravity to the Ball"
+                                },
+                                {
+                                    "type": "p",
+                                    "data": "    // setInterval(() => {"
+                                },
+                                {
+                                    "type": "p",
+                                    "data": "    //    velocity += gravity;"
+                                },
+                                {
+                                    "type": "p",
+                                    "data": "    //    ball.y += velocity;"
+                                },
+                                {
+                                    "type": "p",
+                                    "data": "    // }, 1)"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "html_head",
+                            "parameters": {},
+                            "children": [
+                                {
+                                    "type": "html_title",
+                                    "parameters": {},
+                                    "children": [
+                                        {
+                                            "type": "p",
+                                            "data": "Test Widget"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "html_body",
+                            "parameters": {},
+                            "children": [
+                                {
+                                    "type": "html_circle",
+                                    "parameters": {
+                                        "id": "ball"
+                                    },
+                                    "children": {}
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "type": "article"
+        }
+    ],
+    "Learn to Code": [
+        {
+            "title": "Intro to Javascript",
+            "description": "Learn the basics of Javascript in minutes with this short course.",
+            "tags": [
+                "Learn to Code",
+                "Javascript",
+                "Web Development"
+            ],
+            "slug": "intro-to-javascript",
+            "authors": [
+                {
+                    "name": "William McGonagle",
+                    "slug": "william-mcgonagle"
+                }
+            ],
+            "sections": {
+                "general": [
+                    "Learn the basics of Javascript in minutes with this short course."
+                ],
+                "about this course": [
+                    "With this course, you can learn everything from the basics of Javascript to more advanced concepts like Object-Oriented Programming (OOP) and Reflection."
+                ]
+            },
+            "tableOfContents": [
+                {
+                    "name": "About This Course",
+                    "contents": []
+                }
+            ],
+            "body": [
+                {
+                    "type": "h1",
+                    "data": "Intro to Javascript"
+                },
+                {
+                    "type": "p",
+                    "data": "Learn the basics of Javascript in minutes with this short course."
+                },
+                {
+                    "type": "h2",
+                    "data": "About This Course"
+                },
+                {
+                    "type": "p",
+                    "data": "With this course, you can learn everything from the basics of Javascript to more advanced concepts like Object-Oriented Programming (OOP) and Reflection."
+                },
+                {
+                    "type": "html_contents",
+                    "parameters": {},
+                    "children": [
+                        {
+                            "type": "html_content-section",
+                            "parameters": {
+                                "title": "The Basic Syntax"
+                            },
+                            "children": [
+                                {
+                                    "type": "html_content-article",
+                                    "parameters": {},
+                                    "children": [
+                                        {
+                                            "type": "p",
+                                            "data": "hello-world-in-javascript"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "html_content-article",
+                                    "parameters": {},
+                                    "children": [
+                                        {
+                                            "type": "p",
+                                            "data": "variables-in-javascript"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "html_content-article",
+                                    "parameters": {},
+                                    "children": [
+                                        {
+                                            "type": "p",
+                                            "data": "hello-you-in-javascript"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "type": "course"
+        }
+    ],
+    "Web Development": [
+        {
+            "title": "Intro to Javascript",
+            "description": "Learn the basics of Javascript in minutes with this short course.",
+            "tags": [
+                "Learn to Code",
+                "Javascript",
+                "Web Development"
+            ],
+            "slug": "intro-to-javascript",
+            "authors": [
+                {
+                    "name": "William McGonagle",
+                    "slug": "william-mcgonagle"
+                }
+            ],
+            "sections": {
+                "general": [
+                    "Learn the basics of Javascript in minutes with this short course."
+                ],
+                "about this course": [
+                    "With this course, you can learn everything from the basics of Javascript to more advanced concepts like Object-Oriented Programming (OOP) and Reflection."
+                ]
+            },
+            "tableOfContents": [
+                {
+                    "name": "About This Course",
+                    "contents": []
+                }
+            ],
+            "body": [
+                {
+                    "type": "h1",
+                    "data": "Intro to Javascript"
+                },
+                {
+                    "type": "p",
+                    "data": "Learn the basics of Javascript in minutes with this short course."
+                },
+                {
+                    "type": "h2",
+                    "data": "About This Course"
+                },
+                {
+                    "type": "p",
+                    "data": "With this course, you can learn everything from the basics of Javascript to more advanced concepts like Object-Oriented Programming (OOP) and Reflection."
+                },
+                {
+                    "type": "html_contents",
+                    "parameters": {},
+                    "children": [
+                        {
+                            "type": "html_content-section",
+                            "parameters": {
+                                "title": "The Basic Syntax"
+                            },
+                            "children": [
+                                {
+                                    "type": "html_content-article",
+                                    "parameters": {},
+                                    "children": [
+                                        {
+                                            "type": "p",
+                                            "data": "hello-world-in-javascript"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "html_content-article",
+                                    "parameters": {},
+                                    "children": [
+                                        {
+                                            "type": "p",
+                                            "data": "variables-in-javascript"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "html_content-article",
+                                    "parameters": {},
+                                    "children": [
+                                        {
+                                            "type": "p",
+                                            "data": "hello-you-in-javascript"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "type": "course"
+        }
+    ]
+}

@@ -29,12 +29,18 @@ const CreateWidget = (item) => {
 
     // Data for Runnable
     const doc = {
-        getElementById: () => {  }
+        getElementById: () => { 
+
+            
+
+        }
     };
     const UI = {
         showButton: (name) => { 
             
-            const button = <button className="w-full bg-slate-50 hover:bg-slate-100 p-4 rounded font-bold">{name}</button>; 
+            const button = document.createElement("BUTTON");
+            button.classList = "w-full bg-slate-50 hover:bg-slate-100 p-4 rounded font-bold";
+            button.innerHTML = name;
             ui.push(<div className="w-64">{button}</div>);
             return button;
         
@@ -43,8 +49,8 @@ const CreateWidget = (item) => {
 
     try {
 
-        const runnable = Function("document", "UI", `"use strict";${ChildrenAsString(script.children)}`);
-        const runnableOutput = runnable(doc, UI);
+        const runnable = Function("document", "UI", "setInterval", `"use strict";${ChildrenAsString(script.children)}`);
+        const runnableOutput = runnable(doc, UI, setInterval);
 
         console.log(runnable);
         console.log(runnableOutput);
@@ -63,15 +69,9 @@ const CreateWidget = (item) => {
                 </div>
             </div>
             <div className="h-full flex flex-col align-start justify-start gap-2">
-                <div className="w-64">
-                    <button className="w-full bg-slate-50 hover:bg-slate-100 p-4 rounded font-bold">Press Me</button>
-                </div>
-                <div className="w-64">
-                    <button className="w-full bg-slate-50 hover:bg-slate-100 p-4 rounded font-bold">Press Me</button>
-                </div>
-                <div className="w-64">
-                    <button className="w-full bg-slate-50 hover:bg-slate-100 p-4 rounded font-bold">Press Me</button>
-                </div>
+                {
+                    ui
+                }
             </div>
         </div>
     </div>

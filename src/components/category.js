@@ -3,6 +3,7 @@ import { Link } from "gatsby"
 
 const Slugify = (name) => {
 
+    if (typeof name !== 'string') return "";
     return name.toLowerCase().replace(/ /g, '-').replace(/(?![a-zA-Z\-])/, '')
 
 }
@@ -43,9 +44,9 @@ const GetTagStyle = (name) => {
 
 }
 
-const Category = (item) => {
+const Category = ({ item, className }) => {
 
-    return <span class={`rounded-3xl bg-slate-100 px-2 text-sm ${GetTagStyle(item)}`}>
+    return <span class={`inline-block rounded-3xl bg-slate-100 px-2 text-sm ${GetTagStyle(item)} ${className}`}>
         <Link to={`/categories/${Slugify(item)}`}>
             {item}
         </Link>

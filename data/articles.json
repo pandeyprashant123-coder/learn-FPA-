@@ -204,7 +204,7 @@
                             },
                             {
                                 "type": "p",
-                                "data": "    let gravity = 0;   "
+                                "data": "    let gravity = 0;"
                             },
                             {
                                 "type": "p",
@@ -228,7 +228,7 @@
                             },
                             {
                                 "type": "p",
-                                "data": "    button.onClick = () => {"
+                                "data": "    button.addEventListener(\"onclick\", () => {"
                             },
                             {
                                 "type": "p",
@@ -236,7 +236,7 @@
                             },
                             {
                                 "type": "p",
-                                "data": "    }"
+                                "data": "    });"
                             },
                             {
                                 "type": "p",
@@ -244,19 +244,19 @@
                             },
                             {
                                 "type": "p",
-                                "data": "    setInterval(() => {"
+                                "data": "    // setInterval(() => {"
                             },
                             {
                                 "type": "p",
-                                "data": "        velocity += gravity;"
+                                "data": "    //    velocity += gravity;"
                             },
                             {
                                 "type": "p",
-                                "data": "        ball.y += velocity;"
+                                "data": "    //    ball.y += velocity;"
                             },
                             {
                                 "type": "p",
-                                "data": "    }, 1)"
+                                "data": "    // }, 1)"
                             }
                         ]
                     },

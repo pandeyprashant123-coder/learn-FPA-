@@ -5,9 +5,12 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 import Course from "../components/course"
 
+import Category from "../components/category"
+
 function IndexPage() {
 
   const courses = require('../../data/courses.json');
+  const categories = require('../../data/categories.json');
 
   return (
     <Layout>
@@ -44,13 +47,19 @@ function IndexPage() {
         </div>
       </section>
       <section>
-        <div className="mx-auto max-w-screen-xl px-4 py-16 lg:flex flex-col">
-          <h2 class="text-2xl font-extrabold sm:text-4xl mb-4">Features</h2>
-        </div>
-      </section>
-      <section>
-        <div className="mx-auto max-w-screen-xl px-4 py-16 lg:flex flex-col">
-          <h2 class="text-2xl font-extrabold sm:text-4xl mb-4">Categories</h2>
+        <div className="mx-auto max-w-screen-xl px-4 py-16">
+          <h2 className="text-2xl font-extrabold sm:text-4xl mb-4">Categories</h2>
+          <div class="lg:flex flex-row gap-4">
+            <div className="w-full">
+              <p className="text-lg">To make your learning experience easier, we offer a number of categories so that articles are easily searchable and grouped based on meaning.</p>
+            </div>
+            <div className="w-full mt-4">
+              {
+                Object.keys(categories).map(i => <Category item={i} className="m-1" />)
+              }
+              <Link class="text-sm underline text-sky-400 m-2" to="/categories">Show More...</Link>
+            </div>
+          </div>
         </div>
       </section>
       <section>

@@ -4,7 +4,12 @@ import { Link } from "gatsby"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 
+import Course from "../components/course";
+
 function CoursesPage() {
+
+    const categories = require('../../data/categories.json')
+    const courses = require('../../data/courses.json')
 
     return (
         <Layout>
@@ -19,8 +24,30 @@ function CoursesPage() {
                     </div>
                 </div>
             </section>
-            <section>
-            </section>
+            {
+                (() => {
+
+                    let output = [];
+
+                    for (const key in categories) {
+                        
+                        if (categories[key].filter(i => i.type == "course").length == 0) continue;
+
+                        output.push(<section class="mx-auto max-w-screen-xl px-4 py-8">
+                            <h2 className="text-xl font-bold sm:text-4xl mb-2">{ key }</h2>
+                            <div className="flex flex-row">
+                                {
+                                    categories[key].filter(i => i.type == "course").map(i => <Course {...i} className="w-64" />)
+                                }
+                            </div>
+                        </section>);
+
+                    }
+
+                    return output;
+
+                })()
+            }
         </Layout>
     )
 }
