@@ -1,6 +1,6 @@
 import * as React from "react"
 
-const Search = ({ searchTerm, setSearchTerm, width }) => {
+const Search = ({ searchTerm, setSearchTerm, onSearchEnter, placeholder, width }) => {
   return (
     <div class={`flex items-center ${width}`}>
       <div class="relative w-full">
@@ -22,9 +22,17 @@ const Search = ({ searchTerm, setSearchTerm, width }) => {
         <input
           type="text"
           class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-          placeholder="Search Standards by document name, authors, and categories..."
+          placeholder={placeholder || "Search"}
           value={searchTerm}
           onChange={event => setSearchTerm(event.target.value)}
+          onKeyDown={event => {
+
+            if (event.key !== "Enter") return;
+              
+            event.preventDefault();
+            onSearchEnter(event.target.value)
+      
+          }}
         />
       </div>
     </div>

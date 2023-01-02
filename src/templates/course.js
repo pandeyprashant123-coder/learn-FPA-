@@ -19,7 +19,7 @@ const CourseContents = ({ children }) => {
         { 
             children.map(child => {
 
-                return <div class="w-full shadow p-4 rounded">
+                return <div class="w-full border-2 p-4 rounded">
                     <h3 class="font-bold text-xl">{ child?.parameters?.["title"].toString() }</h3>
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-2 mt-2">
                         {
@@ -51,7 +51,7 @@ const Course = ({ pageContext }) => {
     <section>
         <div class="mx-auto max-w-screen-md px-4 py-16">
             <div class="flex gap-2">
-                {tags.map(item => Category(item))}
+                {tags.map(item => <Category item={item} />)}
             </div>
             <h1 className="font-bold text-4xl">{title}</h1>
             <p className="text-xl mb-16 max-w-2xl">{description}</p>
