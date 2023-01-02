@@ -37,7 +37,7 @@ function CoursesPage() {
                             <h2 className="text-xl font-bold sm:text-4xl mb-2">{ key }</h2>
                             <div className="flex flex-row">
                                 {
-                                    categories[key].filter(i => i.type == "course").map(i => <Course {...i} className="w-64" />)
+                                    categories[key].filter(i => i.type == "course").map(i => <div className="w-64"><Course {...i} /></div>)
                                 }
                             </div>
                         </section>);

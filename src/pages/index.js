@@ -65,6 +65,19 @@ function IndexPage() {
       <section>
         <div className="mx-auto max-w-screen-xl px-4 py-16 lg:flex flex-col">
           <h2 class="text-2xl font-extrabold sm:text-4xl mb-4">Support</h2>
+          <div class="lg:flex flex-row gap-4">
+            <div className="w-full">
+              <p className="text-lg">To help support our effort on FPA Learn, you can donate to us through our main support page. You can also choose to volunteer if you would like to contribute articles that you have written to the learning platform&mdash; allowing a whole new generation to learn coding. </p>
+            </div>
+            <div className="w-full">
+              <Link
+                  class="block w-full rounded bg-active mt-4 px-12 py-3 text-sm font-medium text-center text-white shadow hover:bg-active focus:outline-none focus:ring active:bg-active sm:w-auto"
+                  to="https://about.fairfieldprogramming.org/support/"
+                >
+                Support the FPA
+              </Link>
+            </div>
+          </div>
         </div>
       </section>
     </Layout>

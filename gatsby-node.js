@@ -30,16 +30,18 @@ exports.createPages = ({ actions }) => {
   
   const coursesRaw = fs.readdirSync('./content/courses');
   const articlesRaw = fs.readdirSync('./content/articles');
+  const authorsRaw = fs.readdirSync('./content/authors');
 
   const { createPage } = actions
 
   let courseFileData = [];
   let articleFileData = [];
+  let authorFileData = [];
   let categories = {};
 
   articlesRaw.forEach((articleName, index) => {
 
-    const articleDataRaw = fs.readFileSync('./content/articles/' +articleName, 'utf-8');
+    const articleDataRaw = fs.readFileSync('./content/articles/' + articleName, 'utf-8');
     const articleDataUncleaned = parse(articleDataRaw);
     const articleData = clean(articleDataUncleaned);
 
@@ -63,7 +65,7 @@ exports.createPages = ({ actions }) => {
 
   coursesRaw.forEach((courseName, index) => {
 
-    const courseDataRaw = fs.readFileSync('./content/courses/' +courseName, 'utf-8');
+    const courseDataRaw = fs.readFileSync('./content/courses/' + courseName, 'utf-8');
     const courseDataUncleaned = parse(courseDataRaw);
     const courseData = clean(courseDataUncleaned);
 
@@ -83,24 +85,49 @@ exports.createPages = ({ actions }) => {
       defer: false,
     })
 
+  }) 
+
+  authorsRaw.forEach((authorName, index) => {
+
+    const authorDataRaw = fs.readFileSync('./content/authors/' + authorName, 'utf-8');
+    const authorDataUncleaned = parse(authorDataRaw);
+    const authorData = clean(authorDataUncleaned);
+
+    authorData.tags.forEach((item) => {
+
+      if (categories[item] == undefined) categories[item] = [];
+      categories[item].push({ ...authorData, type: 'author' });
+
+    })
+
+    authorFileData.push(authorData);
+
+    createPage({
+      path: `/authors/${authorData.slug}`,
+      component: require.resolve("./src/templates/author.js"),
+      context: { ...authorData, index },
+      defer: false,
+    })
+
   })
 
-  // Object.keys(standardCategories).forEach(category => {
+  Object.keys(categories).forEach(category => {
 
-  //   const values = standardCategories[category];
-  //   const slugifiedCategory = slugify(category);
+    const values = categories[category];
+    const slugifiedCategory = slugify(category);
 
-  //   createPage({
-  //     path: `/categories/${slugifiedCategory}`,
-  //     component: require.resolve("./src/templates/category.js"),
-  //     context: { standards: values, slug: slugifiedCategory, category },
-  //     defer: false,
-  //   })
+    createPage({
+      path: `/categories/${slugifiedCategory}`,
+      component: require.resolve("./src/templates/category.js"),
+      context: { content: values, slug: slugifiedCategory, category },
+      defer: false,
+    })
 
-  // })
+  })
 
   fs.writeFileSync('./data/courses.json', JSON.stringify(courseFileData, null, 4));
   fs.writeFileSync('./data/articles.json', JSON.stringify(articleFileData, null, 4));
+  fs.writeFileSync('./data/authors.json', JSON.stringify(authorFileData, null, 4));
   fs.writeFileSync('./data/categories.json', JSON.stringify(categories, null, 4));
 
 }

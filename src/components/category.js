@@ -38,7 +38,7 @@ const GetTagStyle = (name) => {
         "text-fuchsia-800 bg-fuchsia-200",
         "text-pink-800 bg-pink-200",
         "text-rose-800 bg-rose-200",
-    ]
+    ] 
 
     return allStyles[Math.abs(HashCode(name)) % allStyles.length]
 
@@ -46,7 +46,7 @@ const GetTagStyle = (name) => {
 
 const Category = ({ item, className }) => {
 
-    return <span class={`inline-block rounded-3xl bg-slate-100 px-2 text-sm ${GetTagStyle(item)} ${className}`}>
+    return <span className={`inline-block rounded-3xl px-2 text-sm ${GetTagStyle(item)} ${className}`}>
         <Link to={`/categories/${Slugify(item)}`}>
             {item}
         </Link>

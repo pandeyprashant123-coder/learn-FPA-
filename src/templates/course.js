@@ -49,7 +49,7 @@ const Course = ({ pageContext }) => {
 
   return <Layout>
     <section>
-        <div class="mx-auto max-w-screen-md px-4 py-16">
+        <div class="mx-auto max-w-screen-md px-4 py-16 min-h-screen">
             <div class="flex gap-2">
                 {tags.map(item => <Category item={item} />)}
             </div>

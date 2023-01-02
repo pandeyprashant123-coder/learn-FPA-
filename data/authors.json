@@ -1,1 +1,19 @@
-[]
+[
+    {
+        "title": "William McGonagle",
+        "description": "Empty Description",
+        "tags": [],
+        "slug": "william-mcgonagle",
+        "authors": [],
+        "sections": {
+            "general": []
+        },
+        "tableOfContents": [],
+        "body": [
+            {
+                "type": "h1",
+                "data": "William McGonagle"
+            }
+        ]
+    }
+]

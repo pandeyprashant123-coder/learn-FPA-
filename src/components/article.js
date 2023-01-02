@@ -1,9 +1,11 @@
 import * as React from "react"
 import { Link } from "gatsby"
 
-const Program = ({ title, slug, description }) => {
+const Article = ({ item, className }) => {
 
-    return <Link className="block w-full h-full" to={`/programs/${slug}`}>
+    const { title, slug, description } = item;
+
+    return <Link className={`block w-full h-full ${className}`} to={`/articles/${slug}`}>
         <div className="rounded shadow p-4">
             <h3 className="text-lg font-bold">{title}</h3>
             <p className="text-md">{description || ""}</p>
@@ -12,4 +14,4 @@ const Program = ({ title, slug, description }) => {
 
 }
 
-export default Program
+export default Article

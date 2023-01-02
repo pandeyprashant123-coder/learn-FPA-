@@ -10,7 +10,7 @@ import Category from "../components/category"
 
 function SearchPage() {
 
-  let queryString = window.location.search;
+  let queryString = typeof window !== 'undefined' ? window.location.search : '';
   const urlParams = new URLSearchParams(queryString);
   const query = urlParams.get('q');
  
@@ -71,7 +71,7 @@ function SearchPage() {
       <div className="mx-auto max-w-screen-xl px-4 py-16 lg:flex flex-col mb-32">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {
-            displayList.map(item => Course(item))
+            displayList.filter(item => item.title.toUpperCase().includes(query.toUpperCase())).map(item => Course(item))
           }
         </div>
       </div>
@@ -82,7 +82,7 @@ function SearchPage() {
 
 export const Head = () => {
 
-  let queryString = window.location.search;
+  let queryString = typeof window !== 'undefined' ? window.location.search : '';
   const urlParams = new URLSearchParams(queryString);
   const query = urlParams.get('q');
  
