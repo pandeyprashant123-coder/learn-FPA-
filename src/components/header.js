@@ -16,6 +16,7 @@ const Header = ({  }) => {
           class="w-min gap-4 text-md font-medium flex md:gap-8"
         >
           <Link class="text-gray-500 no-underline whitespace-nowrap" activeClassName="no-underline whitespace-nowrap" to="/courses">Courses ▾</Link>
+          <Link class="text-gray-500 no-underline whitespace-nowrap" activeClassName="no-underline whitespace-nowrap" to="/articles">Articles ▾</Link>
           <Link class="text-gray-500 no-underline whitespace-nowrap" activeClassName="no-underline whitespace-nowrap" to="https://about.fairfieldprogramming.org/support/">Support</Link>
         </nav>
       </div>
