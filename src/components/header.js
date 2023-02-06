@@ -8,9 +8,9 @@ const Header = ({  }) => {
 
   const [ search, setSearch ] = React.useState('');
 
-  return <header aria-label="Site Header" class="shadow-sm">
+  return <header aria-label="Site Header" class="shadow-sm sticky top-0 bg-white opacity-90">
     <div class="mx-auto max-w-screen-xl p-2 flex">
-      <div class="flex items-center justify-left gap-4 lg:gap-10 w-full">
+      <div class="flex items-center justify-left gap-4 lg:gap-10 w-full justify-around">
         <nav
           aria-label="Site Nav"
           class="w-min gap-4 text-md font-medium flex md:gap-8"
@@ -25,7 +25,7 @@ const Header = ({  }) => {
           <img class="h-12 m-0" src={Logo} alt="The Fairfield Programming Association Logo" />
         </Link>
       </div>
-      <div class="flex items-center justify-end gap-4 lg:gap-10 w-full">
+      <div class="flex items-center justify-around gap-4 lg:gap-10 w-full">
         <nav
           aria-label="Site Nav"
           class="w-min gap-4 text-md font-medium flex md:gap-8"
