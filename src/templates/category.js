@@ -46,7 +46,7 @@ const GetTagStyle = (name) => {
 const Category = ({ pageContext }) => {
 
     const { slug, category, content } = pageContext;
-
+    console.log(content,"its me")
     return <Layout>
         <section>
             <div class="mx-auto max-w-screen-xl px-4 py-16 min-h-screen">
@@ -68,18 +68,7 @@ const Category = ({ pageContext }) => {
                         <h2 className="text-3xl font-bold w-full mt-8 mb-2 border-b-2">Articles</h2>
                         <div class="grid gap-4 grid-cols-1 md:grid-cols-2 mt-4">
                             {
-                                content.filter(item => item.type == "article").map(item => <Article item={item} />)
-                            }
-                        </div>
-                    </>
-                }
-                {
-                    content.filter(item => item.type == "author").length > 0 &&
-                    <>
-                        <h2 className="text-3xl font-bold w-full mt-8 mb-2 border-b-2">Authors</h2>
-                        <div class="grid gap-4 grid-cols-1 md:grid-cols-2 mt-4">
-                            {
-                                content.filter(item => item.type == "author").map(item => JSON.stringify(item))
+                                content.filter(item => item.type == "article").map(item => Article(item))
                             }
                         </div>
                     </>
@@ -87,7 +76,6 @@ const Category = ({ pageContext }) => {
             </div>
         </section>
     </Layout> 
-
 }
 
 export const Head = ({ pageContext }) => <Seo 
